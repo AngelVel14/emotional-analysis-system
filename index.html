@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moodly - Sistema de Análisis Afectivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="heart-icon">💙</span>
+                <span class="logo-text">Moodly</span>
+            </div>
+            <!-- Updated auth buttons to use simpler onclick handlers -->
+            <div class="nav-auth-buttons">
+                <button class="nav-auth-btn login-btn" onclick="window.location.href='login.html'">Iniciar sesión</button>
+                <button class="nav-auth-btn register-btn" onclick="window.location.href='register.html'">Registrarse</button>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Sistema de Análisis Afectivo</h1>
+                <p class="hero-description">
+                    Evaluamos tu estado emocional y te brindamos recomendaciones personalizadas.
+                </p>
+                <button class="cta-button" onclick="window.location.href='login.html'">Empezar</button>
+            </div>
+            <div class="hero-image">
+                <div class="character-container">
+                    <div class="character">
+                        <div class="character-head"></div>
+                        <div class="character-body"></div>
+                        <div class="smiley-face">😊</div>
+                    </div>
+                    <div class="chart-bg"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

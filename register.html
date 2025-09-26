@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta - Moodly</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <!-- Updated header to match mockup with subtitle -->
+                <div class="auth-logo">
+                    <span class="heart-icon">💙</span>
+                    <span class="logo-text">Moodly</span>
+                </div>
+                <div class="auth-subtitle">Sistema de Análisis Afectivo</div>
+                <h1 class="auth-title">Crear Cuenta</h1>
+            </div>
+            
+            <form class="auth-form" id="registerForm">
+                <!-- Updated to use placeholder text instead of labels -->
+                <div class="form-group">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                </div>
+                
+                <!-- Added password confirmation field -->
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar contraseña" required>
+                </div>
+                
+                <!-- Added privacy policy consent checkbox -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <span class="checkmark"></span>
+                        Acepto el consentimiento informado y políticas de privacidad
+                    </label>
+                </div>
+                
+                <button type="submit" class="auth-button">Registrarse</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="auth.js"></script>
+</body>
+</html>

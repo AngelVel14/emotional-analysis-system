@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Moodly</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="heart-icon">💙</span>
+                <span class="logo-text">Moodly</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="diario.html" class="nav-link">Diario</a></li>
+                <li><a href="profesionales.html" class="nav-link">Profesionales</a></li>
+                <li><a href="#" class="nav-link" onclick="logout()">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="dashboard-container">
+            <h1 class="dashboard-title">Dashboard del Usuario</h1>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h2 class="card-title">Evolución Emocional</h2>
+                    <div class="chart-container">
+                        <canvas id="emotionalChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <h2 class="card-title">Recomendaciones del Día</h2>
+                    <div class="recommendation">
+                        <div class="recommendation-icon">💡</div>
+                        <p class="recommendation-text">Considera realizar alguna actividad placentera</p>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card full-width">
+                    <h2 class="card-title">Diario Emocional</h2>
+                    <div class="diary-subtitle">Últimas entradas</div>
+                    <div class="diary-entries">
+                        <div class="diary-entry">
+                            <span class="entry-date">17 de abril</span>
+                            <span class="entry-text">He tenido un día estresante</span>
+                        </div>
+                        <div class="diary-entry">
+                            <span class="entry-date">16 de abril</span>
+                            <span class="entry-text">Me siento contento</span>
+                        </div>
+                        <div class="diary-entry">
+                            <span class="entry-date">15 de abril</span>
+                            <span class="entry-text">Todo ha estado normal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Profesionales - Moodly</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="heart-icon">💙</span>
+                <span class="logo-text">Moodly</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="diario.html" class="nav-link">Diario</a></li>
+                <li><a href="profesionales.html" class="nav-link active">Profesionales</a></li>
+                <li><a href="#" class="nav-link" onclick="logout()">Cerrar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="dashboard-container">
+            <h1 class="dashboard-title">Módulo de Profesionales</h1>
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <h2 class="card-title">Reportes Semanales</h2>
+                    <div class="chart-container">
+                        <canvas id="weeklyChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card">
+                    <h2 class="card-title">Alertas en casos críticos</h2>
+                    <div class="alert-container">
+                        <div class="alert-icon">🔔</div>
+                        <div class="alert-badge">!</div>
+                    </div>
+                </div>
+                
+                <div class="dashboard-card full-width">
+                    <h2 class="card-title">Métricas Agregadas</h2>
+                    <div class="metrics-list">
+                        <div class="metric-item">
+                            <span class="metric-dot"></span>
+                            <span class="metric-text">Pacientes activos</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-dot"></span>
+                            <span class="metric-text">Pacientes inactivos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="profesionales.js"></script>
+</body>
+</html>
