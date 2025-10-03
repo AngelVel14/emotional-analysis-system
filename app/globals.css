@@ -122,4 +122,22 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* ====== Estilos para login/register ====== */
+.auth-container {
+  @apply max-w-md mx-auto mt-10 bg-card text-card-foreground p-6 rounded-xl shadow-md;
+}
+.auth-container h2 {
+  @apply text-2xl font-bold mb-4 text-center;
+}
+.auth-container form {
+  @apply space-y-3;
+}
+.auth-container input {
+  @apply w-full p-2 border border-border rounded-lg;
+}
+.auth-container button {
+  @apply w-full bg-primary text-primary-foreground py-2 rounded-lg font-semibold hover:opacity-90 transition;
+}
+
 }
