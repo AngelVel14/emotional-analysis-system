@@ -223,21 +223,24 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  /* Updated background to light gray for cleaner look */
+  background: #f8f9fa;
 }
 
 .auth-container {
   background: white;
-  padding: 48px;
-  border-radius: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  /* Increased padding and adjusted border radius */
+  padding: 60px 48px;
+  border-radius: 20px;
+  /* Softer shadow for modern look */
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   width: 100%;
-  max-width: 400px;
+  max-width: 480px;
 }
 
 .auth-header {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .auth-logo {
@@ -245,107 +248,131 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  font-size: 24px;
+  /* Increased font size for better visibility */
+  font-size: 32px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
-.auth-title {
-  font-size: 2rem;
-  font-weight: 700;
+.logo-text {
   color: #1e293b;
 }
 
 /* Added styles for auth subtitle */
 .auth-subtitle {
   color: #64748b;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 24px;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  letter-spacing: 0.3px;
+}
+
+.auth-title {
+  /* Adjusted title size and spacing */
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 8px;
 }
 
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  /* Increased gap between form elements */
+  gap: 24px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
-.form-group label {
-  font-weight: 500;
-  color: #374151;
-}
-
-/* Updated form input styles to use placeholders */
-.form-group input {
-  padding: 16px 20px;
-  border: 2px solid #e5e7eb;
+/* Completely redesigned input styles to match mockup */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+  padding: 18px 20px;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   font-size: 16px;
-  transition: border-color 0.2s;
-  background: #f8fafc;
-}
-
-.form-group input::placeholder {
-  color: #9ca3af;
+  transition: all 0.2s;
+  background: white;
+  color: #1e293b;
   font-weight: 400;
 }
 
+.form-group input::placeholder {
+  color: #94a3b8;
+  font-weight: 400;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
 .forgot-password {
-  text-align: center;
-  margin: -10px 0 10px;
+  text-align: right;
+  margin: -12px 0 0;
 }
 
 .forgot-password a {
-  color: #6b7280;
+  color: #64748b;
   text-decoration: none;
   font-size: 14px;
+  font-weight: 500;
 }
 
 .forgot-password a:hover {
   color: #3b82f6;
 }
 
+/* Enhanced button styles */
 .auth-button {
-  background: #3b82f6;
+  background: #5b8def;
   color: white;
   border: none;
-  padding: 14px;
-  font-size: 16px;
+  padding: 16px;
+  font-size: 17px;
   font-weight: 600;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: all 0.2s;
+  margin-top: 8px;
+  letter-spacing: 0.3px;
 }
 
 .auth-button:hover {
-  background: #2563eb;
+  background: #3b82f6;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.auth-button:active {
+  transform: translateY(0);
 }
 
 .auth-switch {
   text-align: center;
-  margin-top: 24px;
-  color: #6b7280;
+  margin-top: 32px;
+  color: #64748b;
+  font-size: 15px;
 }
 
 .auth-switch a {
   color: #3b82f6;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .auth-switch a:hover {
   text-decoration: underline;
 }
 
-/* Added checkbox styles */
+/* Enhanced checkbox styles to match mockup */
 .checkbox-group {
-  margin: 8px 0;
+  margin: 4px 0;
 }
 
 .checkbox-label {
@@ -353,9 +380,10 @@ body {
   align-items: flex-start;
   gap: 12px;
   cursor: pointer;
-  font-size: 14px;
-  color: #374151;
-  line-height: 1.5;
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.6;
+  font-weight: 400;
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -363,11 +391,11 @@ body {
 }
 
 .checkmark {
-  width: 20px;
-  height: 20px;
-  background: #f8fafc;
-  border: 2px solid #e5e7eb;
-  border-radius: 4px;
+  width: 22px;
+  height: 22px;
+  background: white;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -377,8 +405,8 @@ body {
 }
 
 .checkbox-label input[type="checkbox"]:checked + .checkmark {
-  background: #3b82f6;
-  border-color: #3b82f6;
+  background: #5b8def;
+  border-color: #5b8def;
 }
 
 .checkbox-label input[type="checkbox"]:checked + .checkmark::after {
@@ -572,6 +600,11 @@ body {
   }
 
   .auth-container {
-    padding: 32px 24px;
+    padding: 40px 28px;
+  }
+
+  /* Adjusted title size for mobile */
+  .auth-title {
+    font-size: 1.75rem;
   }
 }
