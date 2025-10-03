@@ -5,178 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - Moodly</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Added inline styles as fallback to ensure styles load -->
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f8f9fa;
-        }
-
-        .auth-page {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            background: #f8f9fa;
-        }
-
-        .auth-container {
-            background: white;
-            padding: 60px 48px;
-            border-radius: 20px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-            width: 100%;
-            max-width: 480px;
-        }
-
-        .auth-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .auth-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .heart-icon {
-            font-size: 32px;
-        }
-
-        .logo-text {
-            color: #1e293b;
-        }
-
-        .auth-subtitle {
-            color: #64748b;
-            font-size: 15px;
-            font-weight: 400;
-            margin-bottom: 32px;
-            letter-spacing: 0.3px;
-        }
-
-        .auth-title {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-top: 8px;
-        }
-
-        .auth-form {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group input[type="email"],
-        .form-group input[type="password"] {
-            padding: 18px 20px;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 16px;
-            transition: all 0.2s;
-            background: white;
-            color: #1e293b;
-            font-weight: 400;
-        }
-
-        .form-group input::placeholder {
-            color: #94a3b8;
-            font-weight: 400;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-
-        .forgot-password {
-            text-align: right;
-            margin: -12px 0 0;
-        }
-
-        .forgot-password a {
-            color: #64748b;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-        }
-
-        .forgot-password a:hover {
-            color: #3b82f6;
-        }
-
-        .auth-button {
-            background: #5b8def;
-            color: white;
-            border: none;
-            padding: 16px;
-            font-size: 17px;
-            font-weight: 600;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-            margin-top: 8px;
-            letter-spacing: 0.3px;
-        }
-
-        .auth-button:hover {
-            background: #3b82f6;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-
-        .auth-button:active {
-            transform: translateY(0);
-        }
-
-        .auth-switch {
-            text-align: center;
-            margin-top: 32px;
-            color: #64748b;
-            font-size: 15px;
-        }
-
-        .auth-switch a {
-            color: #3b82f6;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .auth-switch a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .auth-container {
-                padding: 40px 28px;
-            }
-
-            .auth-title {
-                font-size: 1.75rem;
-            }
-        }
-    </style>
 </head>
 <body>
     <div class="auth-page">
@@ -186,21 +14,22 @@
                     <span class="heart-icon">💙</span>
                     <span class="logo-text">Moodly</span>
                 </div>
-                <div class="auth-subtitle">Sistema de Análisis Afectivo</div>
                 <h1 class="auth-title">Iniciar Sesión</h1>
             </div>
             
             <form class="auth-form" id="loginForm">
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 
                 <div class="form-group">
-                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" required>
                 </div>
                 
                 <p class="forgot-password">
-                    <a href="#" onclick="alert('Funcionalidad próximamente'); return false;">¿Olvidaste tu contraseña?</a>
+                    <a href="#" onclick="alert('Funcionalidad próximamente')">¿Olvidaste tu contraseña?</a>
                 </p>
                 
                 <button type="submit" class="auth-button">Ingresar</button>

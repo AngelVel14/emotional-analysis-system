@@ -4,244 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Cuenta - Moodly</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .auth-container {
-            background: white;
-            padding: 60px 48px;
-            border-radius: 20px;
-            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-            width: 100%;
-            max-width: 480px;
-        }
-
-        .auth-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .auth-logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .heart-icon {
-            font-size: 32px;
-        }
-
-        .logo-text {
-            color: #1e293b;
-        }
-
-        .auth-subtitle {
-            color: #64748b;
-            font-size: 15px;
-            font-weight: 400;
-            margin-bottom: 32px;
-            letter-spacing: 0.3px;
-        }
-
-        .auth-title {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-top: 8px;
-        }
-
-        .auth-form {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .form-group input {
-            padding: 18px 20px;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            font-size: 16px;
-            transition: all 0.2s;
-            background: white;
-            color: #1e293b;
-            font-weight: 400;
-        }
-
-        .form-group input::placeholder {
-            color: #94a3b8;
-            font-weight: 400;
-        }
-
-        .form-group input:focus {
-            outline: none;
-            border-color: #3b82f6;
-            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-        }
-
-        .checkbox-group {
-            margin: 4px 0;
-        }
-
-        .checkbox-label {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            cursor: pointer;
-            font-size: 15px;
-            color: #475569;
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        .checkbox-label input[type="checkbox"] {
-            display: none;
-        }
-
-        .checkmark {
-            width: 22px;
-            height: 22px;
-            background: white;
-            border: 2px solid #cbd5e1;
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            margin-top: 2px;
-            transition: all 0.2s;
-        }
-
-        .checkbox-label input[type="checkbox"]:checked + .checkmark {
-            background: #5b8def;
-            border-color: #5b8def;
-        }
-
-        .checkbox-label input[type="checkbox"]:checked + .checkmark::after {
-            content: "✓";
-            color: white;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .auth-button {
-            background: #5b8def;
-            color: white;
-            border: none;
-            padding: 16px;
-            font-size: 17px;
-            font-weight: 600;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.2s;
-            margin-top: 8px;
-            letter-spacing: 0.3px;
-        }
-
-        .auth-button:hover {
-            background: #3b82f6;
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-        }
-
-        .auth-button:active {
-            transform: translateY(0);
-        }
-
-        .auth-switch {
-            text-align: center;
-            margin-top: 32px;
-            color: #64748b;
-            font-size: 15px;
-        }
-
-        .auth-switch a {
-            color: #3b82f6;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .auth-switch a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .auth-container {
-                padding: 40px 28px;
-            }
-
-            .auth-title {
-                font-size: 1.75rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="auth-container">
-        <div class="auth-header">
-            <div class="auth-logo">
-                <span class="heart-icon">💙</span>
-                <span class="logo-text">Moodly</span>
+    <div class="auth-page">
+        <div class="auth-container">
+            <div class="auth-header">
+                <!-- Updated header to match mockup with subtitle -->
+                <div class="auth-logo">
+                    <span class="heart-icon">💙</span>
+                    <span class="logo-text">Moodly</span>
+                </div>
+                <div class="auth-subtitle">Sistema de Análisis Afectivo</div>
+                <h1 class="auth-title">Crear Cuenta</h1>
             </div>
-            <div class="auth-subtitle">Sistema de Análisis Afectivo</div>
-            <h1 class="auth-title">Crear Cuenta</h1>
+            
+            <form class="auth-form" id="registerForm">
+                <!-- Updated to use placeholder text instead of labels -->
+                <div class="form-group">
+                    <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                </div>
+                
+                <!-- Added password confirmation field -->
+                <div class="form-group">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar contraseña" required>
+                </div>
+                
+                <!-- Added privacy policy consent checkbox -->
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <span class="checkmark"></span>
+                        Acepto el consentimiento informado y políticas de privacidad
+                    </label>
+                </div>
+                
+                <button type="submit" class="auth-button">Registrarse</button>
+            </form>
         </div>
-        
-        <form class="auth-form" id="registerForm">
-            <div class="form-group">
-                <input type="text" id="nombre" name="nombre" placeholder="Nombre completo" required>
-            </div>
-            
-            <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
-            </div>
-            
-            <div class="form-group">
-                <input type="password" id="password" name="password" placeholder="Contraseña" required>
-            </div>
-            
-            <div class="form-group">
-                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirmar contraseña" required>
-            </div>
-            
-            <div class="form-group checkbox-group">
-                <label class="checkbox-label">
-                    <input type="checkbox" id="consent" name="consent" required>
-                    <span class="checkmark"></span>
-                    Acepto el consentimiento informado y políticas de privacidad
-                </label>
-            </div>
-            
-            <button type="submit" class="auth-button">Registrarse</button>
-        </form>
-        
-        <p class="auth-switch">
-            ¿Ya tienes una cuenta? <a href="login.html">Iniciar sesión</a>
-        </p>
     </div>
     
     <script src="auth.js"></script>
